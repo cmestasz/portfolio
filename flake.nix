@@ -33,6 +33,7 @@
           ]);
         })
         nodejs
+        pnpm
       ];
       buildInputs = [ pkgs.bashInteractive ];
       initHook = ''
