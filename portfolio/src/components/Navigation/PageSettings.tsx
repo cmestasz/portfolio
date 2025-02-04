@@ -2,7 +2,7 @@
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLanguage, faMoon } from "@fortawesome/free-solid-svg-icons";
-import { useLanguage } from "../LanguageProvider";
+import { useLanguage } from "../Providers/LanguageProvider";
 import { useEffect, useState } from "react";
 
 interface LanguageButtonProps {
@@ -19,7 +19,7 @@ export function LanguageButton({
   return (
     <div className="flex flex-row justify-center gap-2">
       <button
-        className={`text-white bg-secondary-500 px-2 py-1 rounded-lg ${
+        className={`text-primwriting-100 font-bold bg-secondary-500 px-2 py-1 rounded-lg ${
           lang === globalLang || "opacity-50"
         }`}
         onClick={() => setLang(lang)}
@@ -72,8 +72,8 @@ export default function PageSettings() {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="flex flex-col p-4">
-      <div className="flex flex-row justify-between gap-2 items-center">
+    <div className="flex flex-col p-4 gap-2 items-end">
+      <div className="flex flex-row gap-2 items-center">
         <FontAwesomeIcon
           icon={faLanguage}
           size="2x"
@@ -84,7 +84,7 @@ export default function PageSettings() {
           <LanguageButton lang="es" globalLang={lang} setLang={setLang} />
         </div>
       </div>
-      <div className="flex flex-row items-center justify-center gap-4">
+      <div className="flex flex-row items-center justify-center gap-2">
         <FontAwesomeIcon icon={faMoon} size="2x" color="var(--secondary-500)" />
         <DarkModeButton />
       </div>
