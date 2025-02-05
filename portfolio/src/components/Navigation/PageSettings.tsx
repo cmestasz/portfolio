@@ -19,7 +19,7 @@ export function LanguageButton({
   return (
     <div className="flex flex-row justify-center gap-2">
       <button
-        className={`text-primwriting-100 font-bold bg-secondary-500 px-2 py-1 rounded-lg ${
+        className={`text-primwriting-100 font-bold bg-slate-700 dark:bg-slate-300 px-2 py-1 rounded-lg ${
           lang === globalLang || "opacity-50"
         }`}
         onClick={() => setLang(lang)}
@@ -37,7 +37,9 @@ export function DarkModeButton() {
     const localTheme = localStorage.getItem("theme");
     if (localTheme) {
       setTheme(localTheme);
-      const elem = document.getElementById("switch-component")! as HTMLInputElement;
+      const elem = document.getElementById(
+        "switch-component"
+      )! as HTMLInputElement;
       elem.checked = localTheme === "dark";
     }
   }, []);
@@ -52,42 +54,37 @@ export function DarkModeButton() {
   };
 
   return (
-    <div className="relative inline-block w-11 h-5">
-      <input
-        id="switch-component"
-        type="checkbox"
-        className="peer appearance-none w-11 h-5 bg-secondary-500 rounded-full cursor-pointer transition-colors duration-300"
-        onClick={toggleTheme}
-      />
-      <label
-        htmlFor="switch-component"
-        className="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer"
-      ></label>
+    <div className="flex flex-row items-center justify-center gap-2">
+      <FontAwesomeIcon icon={faMoon} size="2x" className="text-slate-700 dark:text-slate-300" />
+
+      <div className="relative inline-block w-11 h-5">
+        <input
+          id="switch-component"
+          type="checkbox"
+          className="peer appearance-none w-11 h-5 bg-slate-700 rounded-full cursor-pointer transition-colors duration-300"
+          onClick={toggleTheme}
+        />
+        <label
+          htmlFor="switch-component"
+          className="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer"
+        ></label>
+      </div>
     </div>
   );
 }
-  
 
 export default function PageSettings() {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="flex flex-col p-4 gap-2 items-end">
+    <div className="flex flex-col px-4 gap-2 items-end">
       <div className="flex flex-row gap-2 items-center">
-        <FontAwesomeIcon
-          icon={faLanguage}
-          size="2x"
-          color="var(--secondary-500)"
-        />
         <div className="flex flex-row justify-center gap-2">
           <LanguageButton lang="en" globalLang={lang} setLang={setLang} />
           <LanguageButton lang="es" globalLang={lang} setLang={setLang} />
         </div>
       </div>
-      <div className="flex flex-row items-center justify-center gap-2">
-        <FontAwesomeIcon icon={faMoon} size="2x" color="var(--secondary-500)" />
-        <DarkModeButton />
-      </div>
+      <DarkModeButton />
     </div>
   );
 }
