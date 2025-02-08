@@ -19,7 +19,7 @@ export function LanguageButton({
   return (
     <div className="flex flex-row justify-center gap-2">
       <button
-        className={`text-primwriting-100 font-bold bg-slate-700 dark:bg-slate-300 px-2 py-1 rounded-lg ${
+        className={`dark:text-slate-700 text-slate-300 font-bold bg-slate-700 dark:bg-slate-300 px-2 py-1 rounded-lg ${
           lang === globalLang || "opacity-50"
         }`}
         onClick={() => setLang(lang)}
@@ -61,12 +61,12 @@ export function DarkModeButton() {
         <input
           id="switch-component"
           type="checkbox"
-          className="peer appearance-none w-11 h-5 bg-slate-700 rounded-full cursor-pointer transition-colors duration-300"
+          className="peer appearance-none w-11 h-5 dark:bg-slate-400 bg-slate-600 rounded-full cursor-pointer transition-colors duration-300"
           onClick={toggleTheme}
         />
         <label
           htmlFor="switch-component"
-          className="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 peer-checked:border-slate-800 cursor-pointer"
+          className="absolute top-0 left-0 w-5 h-5 bg-white rounded-full border border-slate-300 shadow-sm transition-transform duration-300 peer-checked:translate-x-6 cursor-pointer"
         ></label>
       </div>
     </div>
@@ -77,7 +77,7 @@ export default function PageSettings() {
   const { lang, setLang } = useLanguage();
 
   return (
-    <div className="flex flex-col px-4 gap-2 items-end">
+    <div className="flex flex-row px-4 justify-between w-full">
       <div className="flex flex-row gap-2 items-center">
         <div className="flex flex-row justify-center gap-2">
           <LanguageButton lang="en" globalLang={lang} setLang={setLang} />

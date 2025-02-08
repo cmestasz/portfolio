@@ -3,53 +3,34 @@
 @tailwind utilities;
 
 :root {
-  --primary-100: #ff9e00;
-  --primary-200: #ff9100;
-  --primary-300: #ff8500;
-  --primary-400: #ff7900;
-  --primary-500: #ff6d00;
-  --secondary-100: #9d4edd;
-  --secondary-200: #7b2cbf;
-  --secondary-300: #5a189a;
-  --secondary-400: #3c096c;
-  --secondary-500: #240046;
-  --primwriting-100: #ffffff;
-  --primwriting-200: #e0e0e0;
-  --primwriting-300: #c2c2c2;
-  --primwriting-400: #a3a3a3;
-  --primwriting-500: #858585;
-  --secwriting-100: #7a7a7a;
-  --secwriting-200: #5c5c5c;
-  --secwriting-300: #3d3d3d;
-  --secwriting-400: #1f1f1f;
-  --secwriting-500: #000000; 
+  --primary-50: #fffcea;
+  --primary-100: #fff4c5;
+  --primary-200: #ffe885;
+  --primary-300: #ffd546;
+  --primary-400: #ffc11b;
+  --primary-500: #ff9e00;
+  --primary-600: #e27600;
+  --primary-700: #bb5002;
+  --primary-800: #983e08;
+  --primary-900: #7c330b;
+  --primary-950: #481800;
+  --secondary-50: #faf5ff;
+  --secondary-100: #f2e7ff;
+  --secondary-200: #e7d3ff;
+  --secondary-300: #d5b0ff;
+  --secondary-400: #bc7eff;
+  --secondary-500: #a049ff;
+  --secondary-600: #8c2af3;
+  --secondary-700: #791ad6;
+  --secondary-800: #671aaf;
+  --secondary-900: #55178c;
+  --secondary-950: #380269;
   --background: var(--primary-100);
   --foreground: var(--secondary-500);
 }
 
 [data-theme="dark"] {
-  --primary-100: #240046;
-  --primary-200: #3c096c;
-  --primary-300: #5a189a;
-  --primary-400: #7b2cbf;
-  --primary-500: #9d4edd;
-  --secondary-100: #ff6d00;
-  --secondary-200: #ff7900;
-  --secondary-300: #ff8500;
-  --secondary-400: #ff9100;
-  --secondary-500: #ff9e00;
-  --primwriting-100: #000000;
-  --primwriting-200: #1f1f1f;
-  --primwriting-300: #3d3d3d;
-  --primwriting-400: #5c5c5c;
-  --primwriting-500: #7a7a7a;
-  --secwriting-100: #ffffff;
-  --secwriting-200: #e0e0e0;
-  --secwriting-300: #c2c2c2;
-  --secwriting-400: #a3a3a3;
-  --secwriting-500: #858585;
-  --background: var(--primary-100);
-  --foreground: var(--secondary-500);
+  
 }
 
 body {

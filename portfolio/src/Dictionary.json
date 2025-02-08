@@ -1,6 +1,14 @@
 {
+    "full-nav-pretitle": {
+        "en": "Hello!",
+        "es": "Buenas!"
+    },
+    "full-nav-title": {
+        "en": "Name's ",
+        "es": "El nombre es "
+    },
     "full-nav-subtitle": {
-        "en": "(Not a front-end developer!)",
-        "es": "(Desarrollador no frontend!)"
+        "en": "(Not a frontend developer)",
+        "es": "(Desarrollador no frontend)"
     }
 }
